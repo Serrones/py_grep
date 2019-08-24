@@ -6,9 +6,11 @@ def python_grep(text, word):
     
     with open(path, 'r') as filename:
         try:
-            for line in filename:
+            for line_number, line in enumerate(filename):
                 if word in line:
-                    print(line)
+                    print(f'line {line_number} -- '
+                          f'{line}'
+                    )
         finally:
             print('EOF')
             filename.close
