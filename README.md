@@ -19,6 +19,13 @@ create a virtual environment
 
 ### Run
 
-`from py_grep import python_grep`
+`from py_grep import PythonPath`
 
-`python_grep(file, word)`
+`find_word = PythonPath(file, word)`
+
+`find_word.grep()` shows all lines with the word
+
+`find_word.grep_line()` shows all lines enumerated with the word
+
+`find_word.grep_count()` shows how many times the word appears
+
